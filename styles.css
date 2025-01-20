@@ -602,11 +602,10 @@ footer {
 
 .scenario-item {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2.5rem;
     background-color: var(--accent-color);
-    border-radius: 12px;
+    border-radius: 8px;
     transition: transform 0.3s ease;
-    min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -619,15 +618,15 @@ footer {
 
 .scenario-uav-image {
     width: auto;
-    height: 100px; /* Larger size for the UAV */
+    height: 80px;
     margin-bottom: 1.5rem;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Makes it white */
+    filter: brightness(0) invert(1);
 }
 
 .scenario-image {
     width: auto;
-    height: 100px;
+    height: 80px;
     margin-bottom: 1.5rem;
     object-fit: contain;
 }
@@ -736,21 +735,16 @@ footer {
     }
 
     .scenario-item {
-        min-height: auto;
-        padding: 3rem 1.5rem;
+        padding: 2rem;
     }
 
-    .scenario-uav-image {
-        height: 150px;
-    }
-
+    .scenario-uav-image,
     .scenario-image {
-        height: 120px;
+        height: 70px;
     }
 
     .scenario-item h3 {
-        font-size: 1.3rem;
-        margin-top: 1.5rem;
+        font-size: 1.1rem;
     }
 }
 
