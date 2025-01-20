@@ -1,0 +1,669 @@
+:root {
+    --primary-color: #00ff94;
+    --secondary-color: #1a1a1a;
+    --background-dark: #0a0a0a;
+    --text-color: #ffffff;
+    --accent-color: #2d2d2d;
+    --grid-color: rgba(0, 255, 148, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                url('circuit-background.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid overlay effect */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+nav {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.tagline-small {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    padding: 5rem 0;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.sdr-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.description {
+    margin: 2rem 0;
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.description p {
+    margin-bottom: 1rem;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-dark);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    background-color: var(--secondary-color);
+}
+
+.features h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-card {
+    background: var(--accent-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--secondary-color);
+}
+
+.feature-card i,
+.feature-card .sensorz-logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.sensorz-logo {
+    height: 2.5rem;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(95%) sepia(95%) saturate(1000%) hue-rotate(61deg) brightness(104%) contrast(104%);
+}
+
+.feature-card .spec-value {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card .spec-label {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Specifications Section */
+.specifications {
+    padding: 5rem 5%;
+    background-color: var(--background-dark);
+}
+
+.specifications h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.specs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.specs-table {
+    background-color: var(--accent-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.specs-table h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.specs-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specs-table tr:last-child {
+    border-bottom: none;
+}
+
+.specs-table td {
+    padding: 1rem 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.specs-table td:first-child {
+    color: #888;
+    font-weight: 500;
+    width: 45%;
+    padding-right: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    padding: 3rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.footer-social a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 3rem 5%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .specifications h2 {
+        font-size: 2rem;
+    }
+    
+    .specs-table h3 {
+        font-size: 1.3rem;
+    }
+    
+    .specs-table td {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .sdr-image {
+        max-height: 400px;
+    }
+
+    .specs-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-table {
+        padding: 1.5rem;
+    }
+}
+
+/* MANET Section */
+.manet {
+    padding: 5rem 5%;
+    background-color: #b4ae8b; /* Desert white color */
+}
+
+.manet-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.manet-content {
+    flex: 1;
+}
+
+.manet-content h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.manet-features ul {
+    list-style: none;
+}
+
+.manet-features li {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.manet-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.manet-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sdr-image-transparent {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Better for dark image on light background */
+}
+
+@media (max-width: 1024px) {
+    .manet-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 3rem;
+    }
+
+    .manet-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .sdr-image-transparent {
+        max-height: 400px;
+    }
+}
+
+/* Deployment Section */
+.deployment {
+    padding: 5rem 5%;
+    background-color: var(--background-dark);
+}
+
+.deployment-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.deployment-intro h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.quick-features {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.feature-item .accent-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.deployment-scenarios {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.scenario-banner {
+    background-color: var(--accent-color);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.banner-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-device {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.banner-text h3 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.banner-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.banner-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banner-logo {
+    height: 25px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.banner-logo-group span {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.deployment-types {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.scenario-item {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--accent-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scenario-item:hover {
+    transform: translateY(-5px);
+}
+
+.scenario-uav-image {
+    width: auto;
+    height: 100px; /* Larger size for the UAV */
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes it white */
+}
+
+.scenario-image {
+    width: auto;
+    height: 100px;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}
+
+/* Image color treatments */
+.scenario-item:nth-child(2) .scenario-image {
+    filter: none; /* Keep original colors for JNIB */
+}
+
+.scenario-item:last-child .scenario-image {
+    filter: brightness(0) invert(1); /* White for Manpack */
+}
+
+.scenario-item h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .deployment-types {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .scenario-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .deployment-types {
+        grid-template-columns: 1fr;
+    }
+    
+    .scenario-image {
+        height: 160px;
+    }
+} 
