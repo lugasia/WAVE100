@@ -28,4 +28,4 @@ This is a static website built with HTML and CSS. To deploy:
 
 ## Contact
 
-For more information about WAVE100™, please visit [your-website] or contact us at [contact-info]. 
+For more information about WAVE100™, please contact us at amir@tdcomm.tech 
