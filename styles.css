@@ -351,26 +351,31 @@ footer {
     }
 
     .feature-grid {
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
         margin-top: 2rem;
     }
 
     .feature-card {
-        padding: 1.5rem;
+        background-color: var(--accent-color);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
 
     .feature-card i,
     .feature-card .sensorz-logo {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .feature-card .spec-value {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .feature-card .spec-label {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 }
 
